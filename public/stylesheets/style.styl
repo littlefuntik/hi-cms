@@ -1,0 +1,40 @@
+@import 'stylesheets/mixins/helpers'
+@import 'stylesheets/_tags'
+@import 'stylesheets/_button'
+@import 'stylesheets/_themodal'
+@import 'stylesheets/_form'
+@import 'stylesheets/_mainmenu'
+
+.clearfix
+  display inline-block
+  &:after
+    content "."
+    display block
+    height 0
+    clear both
+    visibility hidden
+
+.wraper
+  position relative
+  margin 0 5%
+  background-color #F1F1F1
+  border-radius(6px)
+  h1
+    margin 0
+    padding 1% 2%
+    font-size 150%
+  p
+    margin 0
+    padding 1% 2%
+
+.rounded
+  border 1px solid #606060
+  border-radius(6px)
+
+#signin-form
+  width 300px
+  display none
+
+#signup-form
+  width 300px
+  display none

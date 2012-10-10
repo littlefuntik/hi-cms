@@ -1,0 +1,20 @@
+.btn
+  font-weight bold
+  text-shadow 0 1px 0 white
+  text-decoration none
+  color black
+  background-color #F2F2F2
+  padding 0.4em 0.9em
+
+  border-radius 5px
+  linear-gradient-bgimage 90deg, #DBDBDB, #F2F2F2
+  border 1px solid #B3B3B3
+  box-shadow unquote('inset 0 0 2px 1px white, 0 2px 5px rgba(0,0,0, .15), inset 0 -17px 0 rgba(0,0,0, .06)')
+  &.pushed
+    position relative
+  &:hover
+    linear-gradient-bgimage 90deg, #E8E8E8, #F7F7F7
+  &.pushed:active
+    top 2px
+  &:active
+    box-shadow unquote('inset 0 0 2px 1px rgba(0,0,0, .1), inset 0 -17px 0 rgba(0,0,0, .06)')

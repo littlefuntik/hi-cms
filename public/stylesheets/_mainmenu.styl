@@ -1,0 +1,59 @@
+.drop-shadow
+  background #fff
+  box-shadow(1px 2px 4px 2px #d0d0d0)
+
+.mainmenu
+  position relative
+  top 0
+  float left
+  width 100%
+  margin 0
+  padding 0
+  ul
+    margin 0
+    padding 0
+    list-style none
+  > ul
+    position relative
+    top 0
+    left 2%
+    ul
+      position absolute
+      min-width 100%
+      background #c9c9c9
+      display none
+    li
+      > a, > span
+        display block
+        padding .4em .8em
+        cursor pointer
+      margin 0
+      padding 0
+      white-space nowrap
+      &:hover > a, &:hover > span
+        background #f3f3f3
+      &:hover > ul
+        display block
+    > li:first-child a, > li:first-child span
+      margin-left -.8em
+    > li
+      float left
+      position relative
+      display block
+      li
+        display block
+        > a, > span
+          background #fff
+      > a, > span
+        background transparent
+      ul
+        min-width 100%
+        border 1px solid #e0e0e0
+        box-shadow(2px 2px 4px 1px #d0d0d0, false)
+      > ul
+        top 101%
+        left 0
+        border-top none
+        ul
+          top 0
+          left 100%

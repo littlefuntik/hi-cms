@@ -1,0 +1,53 @@
+pie()
+  behavior url(/PIE.htc)
+
+border-radius(values, IEsupport = true)
+  -webkit-border-radius values
+  -khtml-border-radius values
+  -moz-border-radius values
+  border-radius values
+  if IEsupport
+    pie()
+
+box-shadow(values, IEsupport = true)
+  -webkit-box-shadow values
+  -moz-box-shadow values
+  box-shadow values
+  if IEsupport
+    pie()
+
+linear-gradient-bgimage(position = 90deg, topColor, bottomColor, IEsupport = true)
+  background-image unquote('-webkit-gradient(linear, 0 0, 0 100%, from(' + topColor + ') to(' + bottomColor + '))')  // old webkit
+  background-image unquote('-webkit-linear-gradient(' + position + ', ' + topColor + ', ' + bottomColor + ')')  // new webkit
+  background-image unquote('-moz-linear-gradient(' + position + ', ' + topColor + ', ' + bottomColor + ')')  // gecko
+  background-image unquote('-ms-linear-gradient(' + position + ', ' + topColor + ', ' + bottomColor + ')')  // IE10 preview
+  background-image unquote('-o-linear-gradient(' + position + ', ' + topColor + ', ' + bottomColor + ')')  // opera 11.10+
+  background-image unquote('linear-gradient(' + position + ', ' + topColor + ', ' + bottomColor + ')')  // future CSS3 browsers
+  if IEsupport
+    -pie-background unquote('linear-gradient(' + position + ', ' + topColor + ', ' + bottomColor + ')') // PIE
+    pie()
+
+opacity(n, IEsupport = true)
+  opacity n
+  -moz-opacity n
+  -khtml-opacity n
+  if IEsupport
+    filter unquote('alpha(opacity=' + round(n * 100) + ')')
+    filter unquote('progid:DXImageTransform.Microsoft.Alpha(Opacity=' + round(n * 100) + ')')
+    -ms-filter unquote('"progid:DXImageTransform.Microsoft.Alpha(style=0,opacity=' + round(n * 100) + ')"')
+
+transition(values)
+  -webkit-transition values
+  -moz-transition values
+  -ms-transition values
+  -o-transition values
+  transition: values
+
+user-select(values)
+  -webkit-user-select: values;  // Chrome all / Safari all
+  -moz-user-select: values;     // Firefox all
+  -ms-user-select: values;      // IE 10+
+
+  // No support for these yet, use at own risk
+  -o-user-select: values
+  user-select: values

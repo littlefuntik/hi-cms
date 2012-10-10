@@ -1,0 +1,35 @@
+form
+  margin 0
+  .field-container
+    padding .8em 0 .2em 0
+    position relative
+    input[type="text"], input[type="password"], textarea
+      width 99%
+      padding .4em 0 .4em 1%
+      color #404040
+      background #fff
+      border-width 1px
+      border-style solid
+      border-color #c4c4c4 #d1d1d1 #d4d4d4
+      box-shadow(inset 0 1px 3px rgba(0, 0, 0, 0.12))
+      border-radius(3px)
+      outline 5px solid #EFF4F7
+      -moz-outline-radius 3px
+      &:focus
+        border-color #7DC9E2
+        outline-color #DCEEFC
+        outline-offset 0
+    .error
+      outline-color #FFC9C9!important
+    .success
+      outline 1px solid green
+  .submit-container
+    margin-top .8em
+    padding .4em 0
+    border-top 2px solid #C0C0C0
+    input[type="submit"]
+      padding .4em .8em
+
+.right-link
+  position relative
+  left 10px

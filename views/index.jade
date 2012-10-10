@@ -1,0 +1,72 @@
+!!! 5
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/screen.css')
+    script(src='/javascripts/jquery-1.7.2.min.js')
+    script(src='/javascripts/jquery.the-modal.js')
+    script(src='/javascripts/custom.js')
+  body
+    #signin-form(class='cloud-contaner')
+      .cloud-title
+        .cloud-name Sign In
+        .cloud-close ×
+      .cloud-body
+        form(method='post', action='/submit/signin', data-ajax='Y')
+          .field-container
+            input(type='text', name='uname', placeholder='User name')
+          .field-container
+            input(type='password', name='paswd', placeholder='Password')
+          .submit-container
+            input(type='submit', value='Submit', class='btn')
+            a(href='/signup', class='right-link') Sign Up
+    #signup-form(class='cloud-contaner')
+      .cloud-title
+        .cloud-name Sign Up
+        .cloud-close ×
+      .cloud-body
+        form(method='post', action='/submit/signup', data-ajax='Y')
+          .field-container
+            input(type='text', name='uname', placeholder='User Name')
+          .field-container
+            input(type='text', name='email', placeholder='Email')
+          .field-container
+            input(type='password', name='paswd', placeholder='Password')
+          .submit-container
+            input(type='submit', value='Submit', class='btn')
+            a(href='/signin', class='right-link') Sign In
+    .wraper
+      .mainmenu.drop-shadow
+        ul
+          li
+            a(href='/') Home
+          li
+            span  Element
+            ul
+              li
+                a(href='/e-types') Types
+              li
+                a(href='/e-cls') Collections
+          li
+            a(href='/ext') Extensions
+            ul
+              li
+                a(href='/ext/shop') Shop
+                ul
+                  li
+                    a(href='/ext/shop/import') Import
+                  li
+                    a(href='/ext/shop/export') Export
+              li
+                a(href='/ext/subscribe-email') Subscribe Email
+              li
+                a(href='/ext/contact-form') Contact Form
+          li
+            a(href='/settings') Settings
+          li
+            a(href='/signin') Login
+          li
+            a(href='/signup') Sign Up
+      .clearfix
+      h1 #{title}
+      p Welcome to #{title}.
